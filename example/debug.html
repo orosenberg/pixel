@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Standard Template</title>
+
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0, user-scalable=2;">
+<meta name="apple-mobile-web-app-capable" content="true" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+</head>
+<body>
+
+
+
+<!--  MOCK OVERLAY -->
+	<link href="mock.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+		$(document).ready(function() {
+		  $('#id1').click(function(){ 
+			  $('#mock').show().css('opacity','1');
+		  });
+		  $('#id2').click(function(){ 
+			  $('#mock').show().css('opacity','0.3');
+		  });
+		  $('#id3').click(function(){ 
+			  $('#mock').hide();
+		  });
+		});
+	</script>
+	<div id="mock"></div>
+    <button id="id1">100% mock opacity</button>
+    <button id="id2">30% mock opacity</button>
+    <button id="id3">0% mock opacity</button>
+<!-- end of the mock overlay -->
+
+
+ 
+<div class="wrapper">
+    <div class="header">
+        <img src="images/header.png" alt="" />
+    </div>	
+
+        <a class="button" href="#">Shop Now</a>
+
+        
+    <div id="nearby-locations">
+        <h2>Nearby Locations</h2>
+                <ul>
+                            
+                    <li>
+                            <p>															
+                                <strong>Place Name</strong><br />
+                                <span>(888) 999-0000</span><br>
+                                123 Main Street<br />
+                                Citytown, ST 
+                            </p>
+                            <span>5.3 mi </span>
+                    </li>
+                    <li>
+                            <p>															
+                                <strong>Place Name</strong><br />
+                                <span>(888) 999-0000</span><br>
+                                123 Main Street<br />
+                                Citytown, ST 
+                            </p>
+                            <span>5.3 mi </span>
+                    </li>
+                    <li>
+                            <p>															
+                                <strong>Place Name</strong><br />
+                                <span>(888) 999-0000</span><br>
+                                123 Main Street<br />
+                                Citytown, ST 
+                            </p>
+                            <span>5.3 mi </span>
+                    </li>
+             </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
