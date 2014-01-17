@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		//mocks overlay
+		$('#id1').click(function(){ 
+			$('#mock').show().css('opacity','1');
+		});
+		$('#id2').click(function(){ 
+			$('#mock').show().css('opacity','0.3');
+		});
+		$('#id3').click(function(){ 
+			$('#mock').hide();
+		});
+
+	});
+</script>
+<style>
+/* MOCK overlay */
+#mock{
+	display: block;
+	z-index: 100;
+	width: 100%;
+	height: 758px;
+	position: absolute;
+	top:0;
+	bottom:0;
+	background-image: url("images/mock-desktop.png");
+	opacity: 0;
+	background-size:1280px auto;
+	background-position:  left top;
+	background-repeat: no-repeat;
+	
+}
+.buttons{
+	position:absolute;
+	right:20px;
+	top:5px;
+	z-index:2000;
+	text-align:right;
+	}
+.buttons button{
+	float:right;
+	border-radius:5px;
+	width:200px;
+	text-align:center;
+	line-height:2.5em;
+	color:white;
+	background-color:rgba(0,0,0,0.1);
+	
+}
+button:hover{
+	background-color:black;
+	}
+@media (max-width: 649px) {
+#mock{
+	background-image: url("img/mock-mobile.png");
+	background-size:320px auto;
+	height: 448px;
+	}
+}
+</style>
+<div class="buttons">
+	<button id="id1">mock</button>
+	<button id="id2">30% mock overlay</button>
+	<button id="id3">markup</button>
+</div>
+<div id="mock"></div>
+
+</body>
+</html>
